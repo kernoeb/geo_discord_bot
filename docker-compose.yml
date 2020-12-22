@@ -2,7 +2,5 @@ services:
   web:
     build: .
     restart: always
-    ports:
-      - "5630:3000"
     env_file:
       - token.env
