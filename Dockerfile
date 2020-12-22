@@ -5,7 +5,6 @@ WORKDIR /app
 ADD . /app/
 
 RUN yarn
-RUN yarn build
 
 ENV NODE_ENV production
 
