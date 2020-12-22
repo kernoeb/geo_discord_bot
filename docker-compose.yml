@@ -3,6 +3,6 @@ services:
     build: .
     restart: always
     ports:
-      - "3000:3000"
+      - "5630:3000"
     env_file:
       - token.env
