@@ -32,7 +32,7 @@ function checkAnswer(msg, flag) {
 client.on('message', (msg) => {
   if (msg.author.id !== client.user.id) {
     if (channels[msg.channel.id]) {
-      if (msg.content === 'STOP' || msg.content === 'je sais pas' || msg.content === '!flag stop') {
+      if (msg.content === 'STOP' || msg.content.toUpperCase() === 'JE SAIS PAS' || msg.content === '!flag stop') {
         msg.reply('Arrêt du jeu... c\'était : ' + flags[channels[msg.channel.id].flag])
         delete channels[msg.channel.id]
       } else if (checkAnswer(msg.content, flags[channels[msg.channel.id].flag])) {
