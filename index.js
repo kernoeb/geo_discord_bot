@@ -26,7 +26,7 @@ function sendQuestion(msg) {
 }
 
 function checkAnswer(msg, flag) {
-  return removeAccents(msg).replace(/-/g, '').toUpperCase() === removeAccents(flag).replace(/-/g, '').toUpperCase()
+  return removeAccents(msg).replace(/-/g, ' ').toUpperCase() === removeAccents(flag).replace(/-/g, ' ').toUpperCase()
 }
 
 client.on('message', (msg) => {
