@@ -1,5 +1,5 @@
 {
-  "prefix": "!",
+  "prefix": ":",
   "command": "flag",
   "text": {
     "stop": "Arrêt du jeu... c'était :",
