@@ -98,7 +98,7 @@ client.on('message', async (msg) => {
   // If bot is currently playing/waiting in channel
   if (channels[msg.channel.id]) {
     // Return if pending (message not sent)
-    if (channels[msg.channel.id].pending || (msg.content.startsWith('!') && command !== config.command && args[0] !== 'stop')) return
+    if (channels[msg.channel.id].pending || (msg.content.startsWith('!') && (!(command === config.command && args[0] === 'stop')))) return
 
     // Stop the game
     if ((command === config.command && args[0] === 'stop') || /.*(je(\s.*ne)?\s.*sais\s.*(plus|pas)|aucune\s.*idée).*/i.test(msg.content)) {
