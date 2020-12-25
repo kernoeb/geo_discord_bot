@@ -1,0 +1,11 @@
+{
+  "prefix": "!",
+  "text": {
+    "stop": "Arrêt du jeu... c'était :",
+    "flagQuestion": "**Quel est le drapeau ?**",
+    "flagLoop": "(mode boucle)",
+    "unknown": "Commande inconnue... :thinking:  ",
+    "helpTitle": "Aide...",
+    "help": "- **!flag help** : aide\n- **!flag** : trouve un seul drapeau\n- **!flag loop** : trouve des drapeaux à l'infini\n - **STOP|je sais pas|!flag stop** : termine le jeu en cours"
+  }
+}

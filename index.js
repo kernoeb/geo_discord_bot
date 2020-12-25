@@ -1,74 +1,109 @@
 const Discord = require('discord.js')
 const flags = require('./flags.json')
+const config = require('./config.json')
 const removeAccents = require('remove-accents')
 
+const keys = Object.keys(flags)
+const keysLength = keys.length
 const channels = {}
 
 const client = new Discord.Client()
 
+/**
+ * Bot is ready
+ */
 client.on('ready', () => {
   console.log(`Connecté en tant que ${client.user.tag}!`)
 })
 
-function sendQuestion(msg) {
-  const keys = Object.keys(flags)
-  const randIndex = Math.floor(Math.random() * keys.length)
-  const randKey = keys[randIndex]
+/**
+ * Send the flag
+ * @param msg current message object
+ * @param loop mode
+ */
+async function sendQuestion(msg, loop) {
+  const randFlag = keys[Math.floor(Math.random() * keysLength)]
 
-  const loopMode = (msg.content === '!flag loop') || (channels[msg.channel.id] && channels[msg.channel.id].loop)
-  msg.channel.send(randKey).then(() => {
-    if (loopMode) {
-      channels[msg.channel.id] = {flag: randKey, loop: true}
-    } else {
-      channels[msg.channel.id] = {flag: randKey, loop: false}
-    }
-  })
+  if (channels[msg.channel.id]) {
+    channels[msg.channel.id].flag = randFlag
+    channels[msg.channel.id].pending = true
+  } else {
+    channels[msg.channel.id] = {flag: randFlag, loop, pending: true}
+  }
+
+  await msg.channel.send(randFlag)
+  channels[msg.channel.id].pending = false
 }
 
+/**
+ * Check the answer
+ * @param msg message content
+ * @param flag answer
+ */
 function checkAnswer(msg, flag) {
-  return removeAccents(msg).replace(/-/g, ' ').toUpperCase() === removeAccents(flag).replace(/-/g, ' ').toUpperCase()
+  return removeAccents(msg).replace(/-/g, ' ').toUpperCase()
+    === removeAccents(flag).replace(/-/g, ' ').toUpperCase()
 }
 
-client.on('message', (msg) => {
-  if (msg.author.id !== client.user.id) {
-    if (channels[msg.channel.id]) {
-      if (msg.content === 'STOP' || msg.content.toUpperCase() === 'JE SAIS PAS' || msg.content === '!flag stop') {
-        msg.reply('Arrêt du jeu... c\'était : ' + flags[channels[msg.channel.id].flag])
-        delete channels[msg.channel.id]
-      } else if (checkAnswer(msg.content, flags[channels[msg.channel.id].flag])) {
-        if (channels[msg.channel.id].loop) {
-          msg.react('👍').then(() => {
-            sendQuestion(msg)
-          })
-        } else {
-          delete channels[msg.channel.id]
-          msg.reply('Bravo!')
-        }
+/**
+ * Messages
+ */
+client.on('message', async (msg) => {
+  if (msg.author.bot || /hmmm*/i.test(msg.content)) return // Message is not from bot and not "hmmm"
+  const args = msg.content.slice(config.prefix.length).trim().split(' ') // Get arguments
+  const command = args.shift().toLowerCase() // Get command
+
+  // If bot is currently playing/waiting in channel
+  if (channels[msg.channel.id]) {
+    // Return if pending (message not sent)
+    if (channels[msg.channel.id].pending) return
+
+    // Stop the game
+    if ((command === 'flag' && args[0] === 'stop') || /.*(je(\s.*ne)?\s.*sais\s.*(plus|pas)|aucune\s.*idée).*/i.test(msg.content)) {
+      const tmpFlag = flags[channels[msg.channel.id].flag]
+      delete channels[msg.channel.id]
+      await msg.reply(config.text.stop + ' ' + tmpFlag)
+
+    // Check if answer is correct
+    } else if (checkAnswer(msg.content, flags[channels[msg.channel.id].flag])) {
+      // Check if loop mode
+      if (channels[msg.channel.id].loop) {
+        await msg.react('👍')
+        await sendQuestion(msg, true)
       } else {
-        msg.react('👎')
+        delete channels[msg.channel.id] // Delete the current channel in object
+        await msg.reply('Bravo!')
       }
-    } else if (msg.content === '!flag') {
-      msg.channel.send('**Quel est le drapeau ?**').then(() => {
-        sendQuestion(msg)
-      })
-    } else if (msg.content === '!flag loop') {
-      msg.channel.send('**Quel est le drapeau ?** (mode boucle)').then(() => {
-        sendQuestion(msg)
-      })
-    } else if (msg.content === '!flag help') {
+    } else await msg.react('👎')
+
+  // Check for prefix + flag commands
+  } else if (command === 'flag') {
+    // Not loop mode
+    if (!args.length) {
+      await msg.channel.send(config.text.flagQuestion)
+      await sendQuestion(msg, false)
+
+    // Loop mode
+    } else if (args[0] === 'loop') {
+      await msg.channel.send(config.text.flagQuestion + ' ' + config.text.flagLoop)
+      await sendQuestion(msg, true)
+
+    // Help
+    } else if (args[0] === 'help') {
       const embed = new Discord.MessageEmbed()
-      // Set the title of the field
-        .setTitle('Aide...')
-      // Set the color of the embed
-        .setColor(0xff0000)
-      // Set the main content of the embed
-        .setDescription('- **!flag help** : aide\n- **!flag** : trouve un seul drapeau\n- **!flag loop** : trouve des drapeaux à l\'infini\n - **STOP|je sais pas|!flag stop** : termine le jeu en cours')
-      // Send the embed to the same channel as the message
-      msg.channel.send(embed)
+        .setTitle(config.text.helpTitle).setColor(0xff0000).setDescription(config.text.help)
+      await msg.channel.send(embed)
+
+    // Unknown argument
+    } else {
+      await msg.channel.send(config.text.unknown)
     }
   }
 })
 
+/**
+ * Login the bot
+ */
 if (process.env.TOKEN) {
   client.login(process.env.TOKEN).then(() => {
     console.log('Nice.')
