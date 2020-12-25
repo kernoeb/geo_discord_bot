@@ -1,255 +1,980 @@
 {
-  ":flag_ac:": "Île De L'Ascension",
-  ":flag_ad:": "Andorre",
-  ":flag_ae:": "Émirats Arabes Unis",
-  ":flag_af:": "Afghanistan",
-  ":flag_ag:": "Antigua-Et-Barbuda",
-  ":flag_ai:": "Anguilla",
-  ":flag_al:": "Albanie",
-  ":flag_am:": "Arménie",
-  ":flag_ao:": "Angola",
-  ":flag_aq:": "Antarctique",
-  ":flag_ar:": "Argentine",
-  ":flag_as:": "Samoa Américaines",
-  ":flag_at:": "Autriche",
-  ":flag_au:": "Australie",
-  ":flag_aw:": "Aruba",
-  ":flag_ax:": "Îles Åland",
-  ":flag_az:": "Azerbaïdjan",
-  ":flag_ba:": "Bosnie-Herzégovine",
-  ":flag_bb:": "Barbade",
-  ":flag_bd:": "Bangladesh",
-  ":flag_be:": "Belgique",
-  ":flag_bf:": "Burkina Faso",
-  ":flag_bg:": "Bulgarie",
-  ":flag_bh:": "Bahreïn",
-  ":flag_bi:": "Burundi",
-  ":flag_bj:": "Bénin",
-  ":flag_bl:": "Saint-Barthélemy",
-  ":flag_bm:": "Bermudes",
-  ":flag_bn:": "Brunéi",
-  ":flag_bo:": "Bolivie",
-  ":flag_bq:": "Bonaire",
-  ":flag_br:": "Brésil",
-  ":flag_bs:": "Bahamas",
-  ":flag_bt:": "Bhoutan",
-  ":flag_bv:": "Île Bouvet",
-  ":flag_bw:": "Botswana",
-  ":flag_by:": "Biélorussie",
-  ":flag_bz:": "Belize",
-  ":flag_ca:": "Canada",
-  ":flag_cc:": "Îles Cocos",
-  ":flag_cd:": "Congo-Kinshasa",
-  ":flag_cf:": "République Centrafricaine",
-  ":flag_cg:": "Congo-Brazzaville",
-  ":flag_ch:": "Suisse",
-  ":flag_ci:": "Côte d'Ivoire",
-  ":flag_ck:": "Îles Cook",
-  ":flag_cl:": "Chili",
-  ":flag_cm:": "Cameroun",
-  ":flag_cn:": "Chine",
-  ":flag_co:": "Colombie",
-  ":flag_cp:": "Île Clipperton",
-  ":flag_cr:": "Costa Rica",
-  ":flag_cu:": "Cuba",
-  ":flag_cv:": "Cap-Vert",
-  ":flag_cw:": "Curaçao",
-  ":flag_cx:": "Île Christmas",
-  ":flag_cy:": "Chypre",
-  ":flag_cz:": "Tchéquie",
-  ":flag_de:": "Allemagne",
-  ":flag_dg:": "Diego Garcia",
-  ":flag_dj:": "Djibouti",
-  ":flag_dk:": "Danemark",
-  ":flag_dm:": "Dominique",
-  ":flag_do:": "République dominicaine",
-  ":flag_dz:": "Algérie",
-  ":flag_ea:": "Ceuta et Melilla",
-  ":flag_ec:": "Équateur",
-  ":flag_ee:": "Estonie",
-  ":flag_eg:": "Égypte",
-  ":flag_eh:": "Sahara Occidental",
-  ":flag_er:": "Érythrée",
-  ":flag_es:": "Espagne",
-  ":flag_et:": "Éthiopie",
-  ":flag_fi:": "Finlande",
-  ":flag_fj:": "Fidji",
-  ":flag_fk:": "Îles Malouines",
-  ":flag_fm:": "Micronésie",
-  ":flag_fo:": "Îles Féroé",
-  ":flag_fr:": "France",
-  ":flag_ga:": "Gabon",
-  ":flag_gb:": "Royaume-Uni",
-  ":flag_gd:": "Grenade",
-  ":flag_ge:": "Géorgie",
-  ":flag_gf:": "Guyane Française",
-  ":flag_gg:": "Guernesey",
-  ":flag_gh:": "Ghana",
-  ":flag_gi:": "Gibraltar",
-  ":flag_gl:": "Groenland",
-  ":flag_gm:": "Gambie",
-  ":flag_gn:": "Guinée",
-  ":flag_gp:": "Guadeloupe",
-  ":flag_gq:": "Guinée équatoriale",
-  ":flag_gr:": "Grèce",
-  ":flag_gt:": "Guatemala",
-  ":flag_gu:": "Guam",
-  ":flag_gw:": "Guinée-Bissau",
-  ":flag_gy:": "Guyana",
-  ":flag_hk:": "Hong Kong",
-  ":flag_hn:": "Honduras",
-  ":flag_hr:": "Croatie",
-  ":flag_ht:": "Haïti",
-  ":flag_hu:": "Hongrie",
-  ":flag_ic:": "Îles Canaries",
-  ":flag_id:": "Indonésie",
-  ":flag_ie:": "Irlande",
-  ":flag_il:": "Israël",
-  ":flag_im:": "Île de Man",
-  ":flag_in:": "Inde",
-  ":flag_io:": "Territoire Britannique De L'océan Indien",
-  ":flag_iq:": "Irak",
-  ":flag_ir:": "Iran",
-  ":flag_is:": "Islande",
-  ":flag_it:": "Italie",
-  ":flag_je:": "Jersey",
-  ":flag_jm:": "Jamaïque",
-  ":flag_jo:": "Jordanie",
-  ":flag_jp:": "Japon",
-  ":flag_ke:": "Kenya",
-  ":flag_kg:": "Kirghizistan",
-  ":flag_kh:": "Cambodge",
-  ":flag_ki:": "Kiribati",
-  ":flag_km:": "Comores",
-  ":flag_kn:": "Saint-Christophe-et-Niévès",
-  ":flag_kp:": "Corée du Nord",
-  ":flag_kr:": "Corée du Sud",
-  ":flag_kw:": "Koweït",
-  ":flag_ky:": "Îles Caïmans",
-  ":flag_kz:": "Kazakhstan",
-  ":flag_la:": "Laos",
-  ":flag_lb:": "Liban",
-  ":flag_lc:": "Sainte-Lucie",
-  ":flag_li:": "Liechtenstein",
-  ":flag_lk:": "Sri Lanka",
-  ":flag_lr:": "Libéria",
-  ":flag_ls:": "Lesotho",
-  ":flag_lt:": "Lituanie",
-  ":flag_lu:": "Luxembourg",
-  ":flag_lv:": "Lettonie",
-  ":flag_ly:": "Libye",
-  ":flag_ma:": "Maroc",
-  ":flag_mc:": "Monaco",
-  ":flag_md:": "Moldavie",
-  ":flag_me:": "Monténégro",
-  ":flag_mf:": "Saint-Martin",
-  ":flag_mg:": "Madagascar",
-  ":flag_mh:": "Îles Marshall",
-  ":flag_mk:": "Macédoine Du Nord",
-  ":flag_ml:": "Mali",
-  ":flag_mm:": "Myanmar",
-  ":flag_mn:": "Mongolie",
-  ":flag_mo:": "Macao",
-  ":flag_mp:": "Mariannes du Nord",
-  ":flag_mq:": "Martinique",
-  ":flag_mr:": "Mauritanie",
-  ":flag_ms:": "Montserrat",
-  ":flag_mt:": "Malte",
-  ":flag_mu:": "Maurice",
-  ":flag_mv:": "Maldives",
-  ":flag_mw:": "Malawi",
-  ":flag_mx:": "Mexique",
-  ":flag_my:": "Malaisie",
-  ":flag_mz:": "Mozambique",
-  ":flag_na:": "Namibie",
-  ":flag_nc:": "Nouvelle-Calédonie",
-  ":flag_ne:": "Niger",
-  ":flag_nf:": "Île Norfolk",
-  ":flag_ng:": "Nigéria",
-  ":flag_ni:": "Nicaragua",
-  ":flag_nl:": "Pays-Bas",
-  ":flag_no:": "Norvège",
-  ":flag_np:": "Népal",
-  ":flag_nr:": "Nauru",
-  ":flag_nz:": "Nouvelle-Zélande",
-  ":flag_om:": "Oman",
-  ":flag_pa:": "Panama",
-  ":flag_pe:": "Pérou",
-  ":flag_pf:": "Polynésie Française",
-  ":flag_pg:": "Papouasie-Nouvelle-Guinée",
-  ":flag_ph:": "Philippines",
-  ":flag_pk:": "Pakistan",
-  ":flag_pl:": "Pologne",
-  ":flag_pm:": "Saint-Pierre-et-Miquelon",
-  ":flag_pn:": "Îles Pitcairn",
-  ":flag_pr:": "Porto Rico",
-  ":flag_ps:": "Palestine",
-  ":flag_pt:": "Portugal",
-  ":flag_pw:": "Palaos",
-  ":flag_py:": "Paraguay",
-  ":flag_qa:": "Qatar",
-  ":flag_re:": "La Réunion",
-  ":flag_ro:": "Roumanie",
-  ":flag_rs:": "Serbie",
-  ":flag_ru:": "Russie",
-  ":flag_rw:": "Rwanda",
-  ":flag_sa:": "Arabie Saoudite",
-  ":flag_sb:": "Îles Salomon",
-  ":flag_sc:": "Seychelles",
-  ":flag_sd:": "Soudan",
-  ":flag_se:": "Suède",
-  ":flag_sg:": "Singapour",
-  ":flag_sh:": "Sainte-Hélène",
-  ":flag_si:": "Slovénie",
-  ":flag_sj:": "Svalbard et Jan Mayen",
-  ":flag_sk:": "Slovaquie",
-  ":flag_sl:": "Sierra Leone",
-  ":flag_sm:": "Saint-Marin",
-  ":flag_sn:": "Sénégal",
-  ":flag_so:": "Somalie",
-  ":flag_sr:": "Suriname",
-  ":flag_ss:": "Soudan du Sud",
-  ":flag_st:": "Sao Tomé-et-Principe",
-  ":flag_sv:": "Salvador",
-  ":flag_sx:": "Saint-Martin",
-  ":flag_sy:": "Syrie",
-  ":flag_sz:": "Eswatini",
-  ":flag_ta:": "Tristan Da Cunha",
-  ":flag_tc:": "Îles Turques-et-Caïques",
-  ":flag_td:": "Tchad",
-  ":flag_tf:": "Terres Australes Françaises",
-  ":flag_tg:": "Togo",
-  ":flag_th:": "Thaïlande",
-  ":flag_tj:": "Tadjikistan",
-  ":flag_tk:": "Tokelau",
-  ":flag_tl:": "Timor Oriental",
-  ":flag_tm:": "Turkménistan",
-  ":flag_tn:": "Tunisie",
-  ":flag_to:": "Tonga",
-  ":flag_tr:": "Turquie",
-  ":flag_tt:": "Trinité-et-Tobago",
-  ":flag_tv:": "Tuvalu",
-  ":flag_tw:": "Taiwan",
-  ":flag_tz:": "Tanzanie",
-  ":flag_ua:": "Ukraine",
-  ":flag_ug:": "Ouganda",
-  ":flag_um:": "Îles Mineures éloignées des États-Unis",
-  ":flag_us:": "États-Unis",
-  ":flag_uy:": "Uruguay",
-  ":flag_uz:": "Ouzbékistan",
-  ":flag_va:": "Vatican",
-  ":flag_vc:": "Saint-Vincent-et-les-Grenadines",
-  ":flag_ve:": "Venezuela",
-  ":flag_vg:": "Îles Vierges Britanniques",
-  ":flag_vi:": "Îles Vierges des États-Unis",
-  ":flag_vn:": "Vietnam",
-  ":flag_vu:": "Vanuatu",
-  ":flag_wf:": "Wallis-Et-Futuna",
-  ":flag_ws:": "Samoa",
-  ":flag_xk:": "Kosovo",
-  ":flag_ye:": "Yémen",
-  ":flag_yt:": "Mayotte",
-  ":flag_za:": "Afrique du Sud",
-  ":flag_zm:": "Zambie",
-  ":flag_zw:": "Zimbabwe"
+  ":flag_ac:": {
+    "country": "Île De L'Ascension",
+    "capital": "Georgetown"
+  },
+  ":flag_ad:": {
+    "country": "Andorre",
+    "capital": "Andorre-la-Vieille"
+  },
+  ":flag_ae:": {
+    "country": "Émirats Arabes Unis",
+    "capital": "Abou Dabi"
+  },
+  ":flag_af:": {
+    "country": "Afghanistan",
+    "capital": "Kaboul"
+  },
+  ":flag_ag:": {
+    "country": "Antigua-Et-Barbuda",
+    "capital": "Saint John's"
+  },
+  ":flag_ai:": {
+    "country": "Anguilla",
+    "capital": "The Valley"
+  },
+  ":flag_al:": {
+    "country": "Albanie",
+    "capital": "Tirana"
+  },
+  ":flag_am:": {
+    "country": "Arménie",
+    "capital": "Erevan"
+  },
+  ":flag_ao:": {
+    "country": "Angola",
+    "capital": "Luanda"
+  },
+  ":flag_aq:": {
+    "country": "Antarctique"
+  },
+  ":flag_ar:": {
+    "country": "Argentine",
+    "capital": "Buenos Aires"
+  },
+  ":flag_as:": {
+    "country": "Samoa Américaines",
+    "capital": "Pago Pago"
+  },
+  ":flag_at:": {
+    "country": "Autriche",
+    "capital": "Vienne"
+  },
+  ":flag_au:": {
+    "country": "Australie",
+    "capital": "Canberra"
+  },
+  ":flag_aw:": {
+    "country": "Aruba",
+    "capital": "Oranjestad"
+  },
+  ":flag_ax:": {
+    "country": "Îles Åland",
+    "capital": "Mariehamn"
+  },
+  ":flag_az:": {
+    "country": "Azerbaïdjan",
+    "capital": "Bakou"
+  },
+  ":flag_ba:": {
+    "country": "Bosnie-Herzégovine",
+    "capital": "Sarajevo"
+  },
+  ":flag_bb:": {
+    "country": "Barbade",
+    "capital": "Bridgetown"
+  },
+  ":flag_bd:": {
+    "country": "Bangladesh",
+    "capital": "Dacca"
+  },
+  ":flag_be:": {
+    "country": "Belgique",
+    "capital": "Bruxelles"
+  },
+  ":flag_bf:": {
+    "country": "Burkina Faso",
+    "capital": "Ouagadougou"
+  },
+  ":flag_bg:": {
+    "country": "Bulgarie",
+    "capital": "Sofia"
+  },
+  ":flag_bh:": {
+    "country": "Bahreïn",
+    "capital": "Manama"
+  },
+  ":flag_bi:": {
+    "country": "Burundi",
+    "capital": "Gitega"
+  },
+  ":flag_bj:": {
+    "country": "Bénin",
+    "capital": "Porto-Novo"
+  },
+  ":flag_bl:": {
+    "country": "Saint-Barthélemy",
+    "capital": "Gustavia"
+  },
+  ":flag_bm:": {
+    "country": "Bermudes",
+    "capital": "Hamilton"
+  },
+  ":flag_bn:": {
+    "country": "Brunéi",
+    "capital": "Bandar Seri Begawan"
+  },
+  ":flag_bo:": {
+    "country": "Bolivie",
+    "capital": "Sucre"
+  },
+  ":flag_bq:": {
+    "country": "Bonaire",
+    "capital": "Kralendijk"
+  },
+  ":flag_br:": {
+    "country": "Brésil",
+    "capital": "Brasilia"
+  },
+  ":flag_bs:": {
+    "country": "Bahamas",
+    "capital": "Nassau"
+  },
+  ":flag_bt:": {
+    "country": "Bhoutan",
+    "capital": "Thimphou"
+  },
+  ":flag_bw:": {
+    "country": "Botswana",
+    "capital": "Gaborone"
+  },
+  ":flag_by:": {
+    "country": "Biélorussie",
+    "capital": "Minsk"
+  },
+  ":flag_bz:": {
+    "country": "Belize",
+    "capital": "Belmopan"
+  },
+  ":flag_ca:": {
+    "country": "Canada",
+    "capital": "Ottawa"
+  },
+  ":flag_cc:": {
+    "country": "Îles Cocos",
+    "capital": "West Island"
+  },
+  ":flag_cd:": {
+    "country": "Congo-Kinshasa|République démocratique du Congo",
+    "capital": "Kinshasa"
+  },
+  ":flag_cf:": {
+    "country": "République Centrafricaine",
+    "capital": "Bangui"
+  },
+  ":flag_cg:": {
+    "country": "Congo-Brazzaville|République du Congo",
+    "capital": "Brazzaville"
+  },
+  ":flag_ch:": {
+    "country": "Suisse",
+    "capital": "Berne"
+  },
+  ":flag_ci:": {
+    "country": "Côte d'Ivoire",
+    "capital": "Yamoussoukro"
+  },
+  ":flag_ck:": {
+    "country": "Îles Cook",
+    "capital": "Avarua"
+  },
+  ":flag_cl:": {
+    "country": "Chili",
+    "capital": "Santiago"
+  },
+  ":flag_cm:": {
+    "country": "Cameroun",
+    "capital": "Yaoundé"
+  },
+  ":flag_cn:": {
+    "country": "Chine",
+    "capital": "Pékin"
+  },
+  ":flag_co:": {
+    "country": "Colombie",
+    "capital": "Bogota"
+  },
+  ":flag_cr:": {
+    "country": "Costa Rica",
+    "capital": "San José"
+  },
+  ":flag_cu:": {
+    "country": "Cuba",
+    "capital": "La Havane"
+  },
+  ":flag_cv:": {
+    "country": "Cap-Vert",
+    "capital": "Praia"
+  },
+  ":flag_cw:": {
+    "country": "Curaçao",
+    "capital": "Willemstad"
+  },
+  ":flag_cx:": {
+    "country": "Île Christmas",
+    "capital": "Flying Fish Cove"
+  },
+  ":flag_cy:": {
+    "country": "Chypre",
+    "capital": "Nicosie"
+  },
+  ":flag_cz:": {
+    "country": "Tchéquie",
+    "capital": "Prague"
+  },
+  ":flag_de:": {
+    "country": "Allemagne",
+    "capital": "Berlin"
+  },
+  ":flag_dj:": {
+    "country": "Djibouti",
+    "capital": "Djibouti"
+  },
+  ":flag_dk:": {
+    "country": "Danemark",
+    "capital": "Copenhague"
+  },
+  ":flag_dm:": {
+    "country": "Dominique",
+    "capital": "Roseau"
+  },
+  ":flag_do:": {
+    "country": "République dominicaine",
+    "capital": "Saint-Domingue"
+  },
+  ":flag_dz:": {
+    "country": "Algérie",
+    "capital": "Alger"
+  },
+  ":flag_ea:": {
+    "country": "Ceuta et Melilla"
+  },
+  ":flag_ec:": {
+    "country": "Équateur",
+    "capital": "Quito"
+  },
+  ":flag_ee:": {
+    "country": "Estonie",
+    "capital": "Tallinn"
+  },
+  ":flag_eg:": {
+    "country": "Égypte",
+    "capital": "Le Caire"
+  },
+  ":flag_eh:": {
+    "country": "Sahara Occidental",
+    "capital": "Laâyoune"
+  },
+  ":flag_er:": {
+    "country": "Érythrée",
+    "capital": "Asmara"
+  },
+  ":flag_es:": {
+    "country": "Espagne",
+    "capital": "Madrid"
+  },
+  ":flag_et:": {
+    "country": "Éthiopie",
+    "capital": "Addis-Abeba"
+  },
+  ":flag_fi:": {
+    "country": "Finlande",
+    "capital": "Helsinki"
+  },
+  ":flag_fj:": {
+    "country": "Fidji",
+    "capital": "Suva"
+  },
+  ":flag_fk:": {
+    "country": "Îles Malouines",
+    "capital": "Port Stanley"
+  },
+  ":flag_fm:": {
+    "country": "Micronésie|États fédérés de Micronésie",
+    "capital": "Palikir"
+  },
+  ":flag_fo:": {
+    "country": "Îles Féroé",
+    "capital": "Tórshavn"
+  },
+  ":flag_fr:": {
+    "country": "France",
+    "capital": "Paris"
+  },
+  ":flag_ga:": {
+    "country": "Gabon",
+    "capital": "Libreville"
+  },
+  ":flag_gb:": {
+    "country": "Royaume-Uni",
+    "capital": "Londres"
+  },
+  ":flag_gd:": {
+    "country": "Grenade",
+    "capital": "Saint-Georges"
+  },
+  ":flag_ge:": {
+    "country": "Géorgie",
+    "capital": "Tbilissi"
+  },
+  ":flag_gf:": {
+    "country": "Guyane Française"
+  },
+  ":flag_gg:": {
+    "country": "Guernesey",
+    "capital": "Saint-Pierre-Port"
+  },
+  ":flag_gh:": {
+    "country": "Ghana",
+    "capital": "Accra"
+  },
+  ":flag_gi:": {
+    "country": "Gibraltar",
+    "capital": "Gibraltar"
+  },
+  ":flag_gl:": {
+    "country": "Groenland",
+    "capital": "Nuuk"
+  },
+  ":flag_gm:": {
+    "country": "Gambie",
+    "capital": "Banjul"
+  },
+  ":flag_gn:": {
+    "country": "Guinée",
+    "capital": "Conakry"
+  },
+  ":flag_gp:": {
+    "country": "Guadeloupe",
+    "capital": "Basse-Terre"
+  },
+  ":flag_gq:": {
+    "country": "Guinée équatoriale",
+    "capital": "Malabo"
+  },
+  ":flag_gr:": {
+    "country": "Grèce",
+    "capital": "Athènes"
+  },
+  ":flag_gt:": {
+    "country": "Guatemala",
+    "capital": "Guatemala"
+  },
+  ":flag_gu:": {
+    "country": "Guam",
+    "capital": "Hagåtña"
+  },
+  ":flag_gw:": {
+    "country": "Guinée-Bissau",
+    "capital": "Bissau"
+  },
+  ":flag_gy:": {
+    "country": "Guyana",
+    "capital": "Georgetown"
+  },
+  ":flag_hk:": {
+    "country": "Hong Kong"
+  },
+  ":flag_hn:": {
+    "country": "Honduras",
+    "capital": "Tegucigalpa"
+  },
+  ":flag_hr:": {
+    "country": "Croatie",
+    "capital": "Zagreb"
+  },
+  ":flag_ht:": {
+    "country": "Haïti",
+    "capital": "Port-au-Prince"
+  },
+  ":flag_hu:": {
+    "country": "Hongrie",
+    "capital": "Budapest"
+  },
+  ":flag_ic:": {
+    "country": "Îles Canaries"
+  },
+  ":flag_id:": {
+    "country": "Indonésie",
+    "capital": "Jakarta"
+  },
+  ":flag_ie:": {
+    "country": "Irlande",
+    "capital": "Dublin"
+  },
+  ":flag_il:": {
+    "country": "Israël",
+    "capital": "Jérusalem"
+  },
+  ":flag_im:": {
+    "country": "Île de Man",
+    "capital": "Douglas"
+  },
+  ":flag_in:": {
+    "country": "Inde",
+    "capital": "New Delhi"
+  },
+  ":flag_io:": {
+    "country": "Territoire Britannique De L'océan Indien"
+  },
+  ":flag_iq:": {
+    "country": "Irak",
+    "capital": "Bagdad"
+  },
+  ":flag_ir:": {
+    "country": "Iran",
+    "capital": "Téhéran"
+  },
+  ":flag_is:": {
+    "country": "Islande",
+    "capital": "Reykjavik"
+  },
+  ":flag_it:": {
+    "country": "Italie",
+    "capital": "Rome"
+  },
+  ":flag_je:": {
+    "country": "Jersey",
+    "capital": "Saint-Helier"
+  },
+  ":flag_jm:": {
+    "country": "Jamaïque",
+    "capital": "Kingston"
+  },
+  ":flag_jo:": {
+    "country": "Jordanie",
+    "capital": "Amman"
+  },
+  ":flag_jp:": {
+    "country": "Japon",
+    "capital": "Tokyo"
+  },
+  ":flag_ke:": {
+    "country": "Kenya",
+    "capital": "Nairobi"
+  },
+  ":flag_kg:": {
+    "country": "Kirghizistan",
+    "capital": "Bichkek"
+  },
+  ":flag_kh:": {
+    "country": "Cambodge",
+    "capital": "Phnom Penh"
+  },
+  ":flag_ki:": {
+    "country": "Kiribati",
+    "capital": "Tarawa-Sud"
+  },
+  ":flag_km:": {
+    "country": "Comores",
+    "capital": "Moroni"
+  },
+  ":flag_kn:": {
+    "country": "Saint-Christophe-et-Niévès",
+    "capital": "Basseterre"
+  },
+  ":flag_kp:": {
+    "country": "Corée du Nord",
+    "capital": "Pyongyang"
+  },
+  ":flag_kr:": {
+    "country": "Corée du Sud",
+    "capital": "Séoul"
+  },
+  ":flag_kw:": {
+    "country": "Koweït",
+    "capital": "Koweït"
+  },
+  ":flag_ky:": {
+    "country": "Îles Caïmans",
+    "capital": "George Town"
+  },
+  ":flag_kz:": {
+    "country": "Kazakhstan",
+    "capital": "Noursoultan"
+  },
+  ":flag_la:": {
+    "country": "Laos",
+    "capital": "Vientiane"
+  },
+  ":flag_lb:": {
+    "country": "Liban",
+    "capital": "Beyrouth"
+  },
+  ":flag_lc:": {
+    "country": "Sainte-Lucie",
+    "capital": "Castries"
+  },
+  ":flag_li:": {
+    "country": "Liechtenstein",
+    "capital": "Vaduz"
+  },
+  ":flag_lk:": {
+    "country": "Sri Lanka",
+    "capital": "Sri Jayawardenapura Kotte"
+  },
+  ":flag_lr:": {
+    "country": "Libéria",
+    "capital": "Monrovia"
+  },
+  ":flag_ls:": {
+    "country": "Lesotho",
+    "capital": "Maseru"
+  },
+  ":flag_lt:": {
+    "country": "Lituanie",
+    "capital": "Vilnius"
+  },
+  ":flag_lu:": {
+    "country": "Luxembourg",
+    "capital": "Luxembourg"
+  },
+  ":flag_lv:": {
+    "country": "Lettonie",
+    "capital": "Riga"
+  },
+  ":flag_ly:": {
+    "country": "Libye",
+    "capital": "Tripoli"
+  },
+  ":flag_ma:": {
+    "country": "Maroc",
+    "capital": "Rabat"
+  },
+  ":flag_mc:": {
+    "country": "Monaco",
+    "capital": "Monaco"
+  },
+  ":flag_md:": {
+    "country": "Moldavie",
+    "capital": "Chisinau"
+  },
+  ":flag_me:": {
+    "country": "Monténégro",
+    "capital": "Podgorica"
+  },
+  ":flag_mf:": {
+    "country": "Saint-Martin"
+  },
+  ":flag_mg:": {
+    "country": "Madagascar",
+    "capital": "Antananarivo"
+  },
+  ":flag_mh:": {
+    "country": "Îles Marshall",
+    "capital": "Delap-Uliga-Darrit"
+  },
+  ":flag_mk:": {
+    "country": "Macédoine Du Nord",
+    "capital": "Skopje"
+  },
+  ":flag_ml:": {
+    "country": "Mali",
+    "capital": "Bamako"
+  },
+  ":flag_mm:": {
+    "country": "Myanmar|Birmanie",
+    "capital": "Naypyidaw"
+  },
+  ":flag_mn:": {
+    "country": "Mongolie",
+    "capital": "Oulan-Bator"
+  },
+  ":flag_mo:": {
+    "country": "Macao"
+  },
+  ":flag_mp:": {
+    "country": "Mariannes du Nord"
+  },
+  ":flag_mq:": {
+    "country": "Martinique"
+  },
+  ":flag_mr:": {
+    "country": "Mauritanie",
+    "capital": "Nouakchott"
+  },
+  ":flag_ms:": {
+    "country": "Montserrat"
+  },
+  ":flag_mt:": {
+    "country": "Malte",
+    "capital": "La Valette"
+  },
+  ":flag_mu:": {
+    "country": "Maurice",
+    "capital": "Port-Louis"
+  },
+  ":flag_mv:": {
+    "country": "Maldives",
+    "capital": "Malé"
+  },
+  ":flag_mw:": {
+    "country": "Malawi",
+    "capital": "Lilongwe"
+  },
+  ":flag_mx:": {
+    "country": "Mexique",
+    "capital": "Mexico"
+  },
+  ":flag_my:": {
+    "country": "Malaisie",
+    "capital": "Putrajaya"
+  },
+  ":flag_mz:": {
+    "country": "Mozambique",
+    "capital": "Maputo"
+  },
+  ":flag_na:": {
+    "country": "Namibie",
+    "capital": "Windhoek"
+  },
+  ":flag_nc:": {
+    "country": "Nouvelle-Calédonie"
+  },
+  ":flag_ne:": {
+    "country": "Niger",
+    "capital": "Niamey"
+  },
+  ":flag_nf:": {
+    "country": "Île Norfolk",
+    "capital": "Kingston"
+  },
+  ":flag_ng:": {
+    "country": "Nigéria",
+    "capital": "Abuja"
+  },
+  ":flag_ni:": {
+    "country": "Nicaragua",
+    "capital": "Managua"
+  },
+  ":flag_nl:": {
+    "country": "Pays-Bas",
+    "capital": "Amsterdam"
+  },
+  ":flag_no:": {
+    "country": "Norvège",
+    "capital": "Oslo"
+  },
+  ":flag_np:": {
+    "country": "Népal",
+    "capital": "Katmandou"
+  },
+  ":flag_nr:": {
+    "country": "Nauru",
+    "capital": "Yaren"
+  },
+  ":flag_nu:": {
+    "country": "Niue",
+    "capital": "Alofi"
+  },
+  ":flag_nz:": {
+    "country": "Nouvelle-Zélande",
+    "capital": "Wellington"
+  },
+  ":flag_om:": {
+    "country": "Oman",
+    "capital": "Mascate"
+  },
+  ":flag_pa:": {
+    "country": "Panama",
+    "capital": "Panama"
+  },
+  ":flag_pe:": {
+    "country": "Pérou",
+    "capital": "Lima"
+  },
+  ":flag_pf:": {
+    "country": "Polynésie Française",
+    "capital": "Papeete"
+  },
+  ":flag_pg:": {
+    "country": "Papouasie-Nouvelle-Guinée",
+    "capital": "Port Moresby"
+  },
+  ":flag_ph:": {
+    "country": "Philippines",
+    "capital": "Manille"
+  },
+  ":flag_pk:": {
+    "country": "Pakistan",
+    "capital": "Islamabad"
+  },
+  ":flag_pl:": {
+    "country": "Pologne",
+    "capital": "Varsovie"
+  },
+  ":flag_pm:": {
+    "country": "Saint-Pierre-et-Miquelon"
+  },
+  ":flag_pn:": {
+    "country": "Îles Pitcairn",
+    "capital": "Adamstown"
+  },
+  ":flag_pr:": {
+    "country": "Porto Rico",
+    "capital": "San Juan"
+  },
+  ":flag_ps:": {
+    "country": "Palestine",
+    "capital": "Jérusalem-Est"
+  },
+  ":flag_pt:": {
+    "country": "Portugal",
+    "capital": "Lisbonne"
+  },
+  ":flag_pw:": {
+    "country": "Palaos",
+    "capital": "Melekeok"
+  },
+  ":flag_py:": {
+    "country": "Paraguay,",
+    "capital": "Asuncion"
+  },
+  ":flag_qa:": {
+    "country": "Qatar",
+    "capital": "Doha"
+  },
+  ":flag_re:": {
+    "country": "La Réunion",
+    "capital": "Saint-Denis"
+  },
+  ":flag_ro:": {
+    "country": "Roumanie",
+    "capital": "Bucarest"
+  },
+  ":flag_rs:": {
+    "country": "Serbie",
+    "capital": "Belgrade"
+  },
+  ":flag_ru:": {
+    "country": "Russie",
+    "capital": "Moscou"
+  },
+  ":flag_rw:": {
+    "country": "Rwanda",
+    "capital": "Kigali"
+  },
+  ":flag_sa:": {
+    "country": "Arabie Saoudite",
+    "capital": "Riyad"
+  },
+  ":flag_sb:": {
+    "country": "Îles Salomon",
+    "capital": "Honiara"
+  },
+  ":flag_sc:": {
+    "country": "Seychelles",
+    "capital": "Victoria"
+  },
+  ":flag_sd:": {
+    "country": "Soudan",
+    "capital": "Khartoum"
+  },
+  ":flag_se:": {
+    "country": "Suède",
+    "capital": "Stockholm"
+  },
+  ":flag_sg:": {
+    "country": "Singapour",
+    "capital": "Singapour"
+  },
+  ":flag_sh:": {
+    "country": "Sainte-Hélène",
+    "capital": "Jamestown"
+  },
+  ":flag_si:": {
+    "country": "Slovénie",
+    "capital": "Ljubljana"
+  },
+  ":flag_sj:": {
+    "country": "Svalbard et Jan Mayen"
+  },
+  ":flag_sk:": {
+    "country": "Slovaquie",
+    "capital": "Bratislava"
+  },
+  ":flag_sl:": {
+    "country": "Sierra Leone",
+    "capital": "Freetown"
+  },
+  ":flag_sm:": {
+    "country": "Saint-Marin",
+    "capital": "Saint-Marin"
+  },
+  ":flag_sn:": {
+    "country": "Sénégal",
+    "capital": "Dakar"
+  },
+  ":flag_so:": {
+    "country": "Somalie",
+    "capital": "Mogadiscio"
+  },
+  ":flag_sr:": {
+    "country": "Suriname",
+    "capital": "Paramaribo"
+  },
+  ":flag_ss:": {
+    "country": "Soudan du Sud",
+    "capital": "Djouba"
+  },
+  ":flag_st:": {
+    "country": "Sao Tomé-et-Principe",
+    "capital": "São Tomé"
+  },
+  ":flag_sv:": {
+    "country": "Salvador",
+    "capital": "San Salvador"
+  },
+  ":flag_sy:": {
+    "country": "Syrie",
+    "capital": "Damas"
+  },
+  ":flag_sz:": {
+    "country": "Eswatini",
+    "capital": "Mbabane"
+  },
+  ":flag_tc:": {
+    "country": "Îles Turques-et-Caïques",
+    "capital": "Cockburn Town"
+  },
+  ":flag_td:": {
+    "country": "Tchad",
+    "capital": "N'Djaména"
+  },
+  ":flag_tf:": {
+    "country": "Terres Australes Françaises"
+  },
+  ":flag_tg:": {
+    "country": "Togo",
+    "capital": "Lomé"
+  },
+  ":flag_th:": {
+    "country": "Thaïlande",
+    "capital": "Bangkok"
+  },
+  ":flag_tj:": {
+    "country": "Tadjikistan",
+    "capital": "Douchanbé"
+  },
+  ":flag_tk:": {
+    "country": "Tokelau"
+  },
+  ":flag_tl:": {
+    "country": "Timor Oriental",
+    "capital": "Díli"
+  },
+  ":flag_tm:": {
+    "country": "Turkménistan",
+    "capital": "Achgabat"
+  },
+  ":flag_tn:": {
+    "country": "Tunisie",
+    "capital": "Tunis"
+  },
+  ":flag_to:": {
+    "country": "Tonga",
+    "capital": "Nuku'alofa"
+  },
+  ":flag_tr:": {
+    "country": "Turquie",
+    "capital": "Ankara"
+  },
+  ":flag_tt:": {
+    "country": "Trinité-et-Tobago",
+    "capital": "Port-d'Espagne"
+  },
+  ":flag_tv:": {
+    "country": "Tuvalu",
+    "capital": "Funafuti"
+  },
+  ":flag_tw:": {
+    "country": "Taiwan",
+    "capital": "Taipei"
+  },
+  ":flag_tz:": {
+    "country": "Tanzanie",
+    "capital": "Dodoma"
+  },
+  ":flag_ua:": {
+    "country": "Ukraine",
+    "capital": "Kiev"
+  },
+  ":flag_ug:": {
+    "country": "Ouganda",
+    "capital": "Kampala"
+  },
+  ":flag_um:": {
+    "country": "Îles Mineures éloignées des États-Unis"
+  },
+  ":flag_us:": {
+    "country": "États-Unis",
+    "capital": "Washington D.C."
+  },
+  ":flag_uy:": {
+    "country": "Uruguay",
+    "capital": "Montevideo"
+  },
+  ":flag_uz:": {
+    "country": "Ouzbékistan",
+    "capital": "Tachkent"
+  },
+  ":flag_va:": {
+    "country": "Vatican",
+    "capital": "Cité du Vatican"
+  },
+  ":flag_vc:": {
+    "country": "Saint-Vincent-et-les-Grenadines",
+    "capital": "Kingstown"
+  },
+  ":flag_ve:": {
+    "country": "Venezuela",
+    "capital": "Caracas"
+  },
+  ":flag_vg:": {
+    "country": "Îles Vierges Britanniques",
+    "capital": "Road Town"
+  },
+  ":flag_vi:": {
+    "country": "Îles Vierges des États-Unis",
+    "capital": "Charlotte Amélie"
+  },
+  ":flag_vn:": {
+    "country": "Vietnam",
+    "capital": "Hanoï"
+  },
+  ":flag_vu:": {
+    "country": "Vanuatu",
+    "capital": "Port-Vila"
+  },
+  ":flag_wf:": {
+    "country": "Wallis-Et-Futuna"
+  },
+  ":flag_ws:": {
+    "country": "Samoa",
+    "capital": "Apia"
+  },
+  ":flag_xk:": {
+    "country": "Kosovo",
+    "capital": "Pristina"
+  },
+  ":flag_ye:": {
+    "country": "Yémen",
+    "capital": "Sanaa"
+  },
+  ":flag_yt:": {
+    "country": "Mayotte",
+    "capital": "Mamoudzou"
+  },
+  ":flag_za:": {
+    "country": "Afrique du Sud",
+    "capital": "Pretoria"
+  },
+  ":flag_zm:": {
+    "country": "Zambie",
+    "capital": "Lusaka"
+  },
+  ":flag_zw:": {
+    "country": "Zimbabwe",
+    "capital": "Harare"
+  }
 }

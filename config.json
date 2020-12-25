@@ -1,8 +1,10 @@
 {
   "prefix": "!",
+  "command": "flag",
   "text": {
     "stop": "Arrêt du jeu... c'était :",
     "flagQuestion": "**Quel est le drapeau ?**",
+    "capitalQuestion": "**Quel est la capitale ?**",
     "flagLoop": "(mode boucle)",
     "unknown": "Commande inconnue... :thinking:  ",
     "helpTitle": "Aide...",
