@@ -8,6 +8,6 @@ Bot Discord pour apprendre les drapeaux.
 - !geo flag [loop] : devine le(s) drapeau(x)
 - !geo capital [loop] : devine la ou les capitale(s)
 - !geo dep [loop] : devine le ou les département(s) :flag_fr:
-- !geo next : passe au suivant (mode boucle uniquement)
-- !geo stop : termine la partie en cours
+- !geo next : passe au suivant en mode boucle (ou "Je passe", "Suivant", ou "Next")
+- !geo stop : termine la partie en cours 
 ```
