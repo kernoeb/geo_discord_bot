@@ -4,8 +4,10 @@ Bot Discord pour apprendre les drapeaux.
 
 ## Utilisation
 ```
-- !flag help : aide
-- !flag : trouve un seul drapeau
-- !flag loop : trouve des drapeaux à l'infini
-- !flag stop : termine le jeu en cours (ou écrire un message type "je sais pas")
+- !geo help : aide
+- !geo flag [loop] : devine le(s) drapeau(x)
+- !geo capital [loop] : devine la ou les capitale(s)
+- !geo dep [loop] : devine le ou les département(s) :flag_fr:
+- !geo next : passe au suivant (mode boucle uniquement)
+- !geo stop : termine la partie en cours
 ```

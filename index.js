@@ -1,85 +1,127 @@
+/**
+ * Discord GeoFR
+ * @author kernoeb
+ */
 const Discord = require('discord.js')
-const flags = require('./flags.json')
-const config = require('./config.json')
 const removeAccents = require('remove-accents')
-
-const keys = Object.keys(flags)
-const keysLength = keys.length
-
-const keysNoCapital = []
-for (const i of keys) {
-  if (flags[i]['capital']) keysNoCapital.push(i)
-}
-const keysNoCapitalLength = keysNoCapital.length
-
-const channels = {}
+const utils = require('./utils')
 
 const client = new Discord.Client()
 
-/**
- * Bot is ready
- */
+const flags = require('./data/flags.json')
+const departments = require('./data/departments.json')
+const letters_digits = require('./data/letters_digits.json')
+const config = require('./config.json')
+
+const flagKeys = Object.keys(flags)
+const departmentsKeys = Object.keys(departments)
+
+const flagKeysNoCapital = []
+for (const i of flagKeys) {
+  if (flags[i]['capital']) flagKeysNoCapital.push(i)
+}
+
+// Database
+const channels = {}
+
+
+// Bot is ready
 client.on('ready', () => {
   console.log(`Connecté en tant que ${client.user.tag}!`)
 })
 
-/**
- * Send the flag
- * @param msg current message object
- * @param loop mode
- */
-async function sendFlag(msg, loop) {
-  const randFlag = keys[Math.floor(Math.random() * keysLength)]
-
-  if (channels[msg.channel.id]) {
-    channels[msg.channel.id].flag = randFlag
-    channels[msg.channel.id].pending = true
-  } else {
-    channels[msg.channel.id] = {flag: randFlag, loop, mode: 'flag', pending: true}
-  }
-
-  await msg.channel.send(randFlag)
-  channels[msg.channel.id].pending = false
+// Help message
+async function help(msg) {
+  const embed = new Discord.MessageEmbed()
+    .setTitle(config.text.helpTitle).setColor(0xff0000).setDescription(config.text.help)
+  await msg.channel.send(embed)
 }
 
-/**
- * Send the capital
- * @param msg current message object
- * @param loop mode
- */
-async function sendCapital(msg, loop) {
-  const randFlag = keysNoCapital[Math.floor(Math.random() * keysNoCapitalLength)]
-
-  if (channels[msg.channel.id]) {
-    channels[msg.channel.id].flag = randFlag
-    channels[msg.channel.id].pending = true
-  } else {
-    channels[msg.channel.id] = {flag: randFlag, loop, mode: 'capital', pending: true}
-  }
-
-  await msg.channel.send(randFlag + ' **' + flags[randFlag].country.split('|').join(', ') + '**')
-  channels[msg.channel.id].pending = false
-}
-
-/**
- * Check the answer
- * @param msg message content
- * @param flag answer
- * @param mode
- */
-function checkAnswer(msg, flag, mode) {
-  if (mode === 'capital') {
-    flag = flag['capital']
-  } else if (mode === 'flag') {
-    flag = flag['country']
-  } else {
+// Global message sender
+async function sendAll(msg, mode, args) {
+  if (args && !args.length) {
+    await help(msg)
+    return
+  } else if (args && args.length > 2) {
+    await msg.channel.send(config.text.unknown)
     return
   }
+
+  const loop = args && args[1] === 'loop'
+
+  if ((mode && mode === 'capital') || (args && args[0] === 'capital')) {
+    if (args) await msg.channel.send(config.text.capitalQuestion + (loop ? (' ' + config.text.loopMode) : ''))
+    await send(msg, loop, 'capital', flagKeys, randFlag => randFlag + ' **' + flags[randFlag].country.split('|').join(', ') + '**')
+    return
+  } else if ((mode && mode === 'flag') || (args && args[0] === 'flag')) {
+    if (args) await msg.channel.send(config.text.flagQuestion + (loop ? (' ' + config.text.loopMode) : ''))
+    await send(msg, loop, 'flag', flagKeys, randFlag => randFlag)
+    return
+  } else if ((mode && mode === 'departmentNumber') || (args && args[0] === 'dep')) {
+    if (args) await msg.channel.send(config.text.departmentNumberQuestion + (loop ? (' ' + config.text.loopMode) : ''))
+    await send(msg, loop, 'departmentNumber', departmentsKeys, randFlag => randFlag.split('').map(l => letters_digits[l]).join(''))
+    return
+  }
+
+  if (!mode) {
+    if (args && args.length === 1 && args[0] === 'help') await help(msg)
+    else await msg.channel.send(config.text.unknown)
+  }
+}
+
+// Send message
+async function send(msg, loop, mode, keys, textFct) {
+  const randFlag = keys[Math.floor(Math.random() * keys.length)]
+  setChannels(msg, randFlag, loop, mode)
+  await sendChannel(msg, textFct(randFlag))
+}
+
+// Reply with stop message
+async function stop(msg, mode, flag) {
+  if (mode === 'capital') await msg.channel.send(utils.tag(msg.author.id) + ' ' + config.text.stop + ' ' + config.text.answerWas + ' ' + utils.gras(flag['capital']) + '.')
+  else if (mode === 'flag') await msg.channel.send(utils.tag(msg.author.id) + ' ' + config.text.stop + ' ' + config.text.answerWas + ' ' + utils.gras(flag['country']) + '.')
+  else if (mode === 'departmentNumber') await msg.channel.send(utils.tag(msg.author.id) + ' ' + config.text.stop + ' ' + config.text.answerWas + ' ' + utils.gras(flag) + '.')
+}
+
+// Reply with next message
+async function next(msg, mode, flag) {
+  if (mode === 'capital') await msg.channel.send(config.text.answerWas + ' ' + utils.gras(flag['capital']) + '.')
+  else if (mode === 'flag') await msg.channel.send(config.text.answerWas + ' ' + utils.gras(flag['country']) + '.')
+  else if (mode === 'departmentNumber') await msg.channel.send(config.text.answerWas + ' ' + utils.gras(flag) + '.')
+}
+
+
+// Send to channel and remove pending mode
+async function sendChannel(msg, text) {
+  await msg.channel.send(text)
+  channels[msg.channel.id].pending = false
+}
+
+// Get Flag
+function getFlag(msg, mode) {
+  if (['flag', 'capital'].includes(mode)) return flags[channels[msg.channel.id].flag]
+  else if (['departmentNumber'].includes(mode)) return departments[channels[msg.channel.id].flag]
+}
+
+// Set channel object
+function setChannels(msg, randFlag, loop, mode) {
+  if (channels[msg.channel.id]) {
+    channels[msg.channel.id].flag = randFlag
+    channels[msg.channel.id].pending = true
+  } else {
+    channels[msg.channel.id] = {flag: randFlag, loop, mode, pending: true}
+  }
+}
+
+// Check the answer
+function checkAnswer(msg, flag, mode) {
+  if (mode === 'capital') flag = flag['capital']
+  else if (mode === 'flag') flag = flag['country']
 
   let b = false
   for (const i of flag.split('|')) {
     if (removeAccents(msg).replace(/-/g, ' ').replace(/\./g, '').toUpperCase().trim()
-        === removeAccents(i).replace(/-/g, ' ').replace(/\./g, '').toUpperCase().trim()) {
+      === removeAccents(i).replace(/-/g, ' ').replace(/\./g, '').toUpperCase().trim()) {
       b = true
       break
     }
@@ -87,70 +129,45 @@ function checkAnswer(msg, flag, mode) {
   return b
 }
 
-/**
- * Messages
- */
+// Messages
 client.on('message', async (msg) => {
-  if (msg.author.bot || /hmmm*/i.test(msg.content)) return // Message is not from bot and not "hmmm"
-  const args = msg.content.slice(config.prefix.length).trim().split(' ') // Get arguments
-  const command = args.shift().toLowerCase() // Get command
+  if (msg.author.bot || /hmmm*/i.test(msg.content)) return
 
-  // If bot is currently playing/waiting in channel
+  const args = msg.content.slice(config.prefix.length).trim().split(' ') // Arguments
+  const command = args.shift().toLowerCase() // Command
+
   if (channels[msg.channel.id]) {
-    // Return if pending (message not sent)
-    if (channels[msg.channel.id].pending || (msg.content.startsWith('!') && (!(command === config.command && args[0] === 'stop')))) return
+    if (channels[msg.channel.id].pending || (msg.content.startsWith('!') && (!(command === config.command && /(stop|next)/.test(args[0]))))) return // Pending
 
-    // Stop the game
-    if ((command === config.command && args[0] === 'stop') || /.*(je(\s.*ne)?\s.*sais\s.*(plus|pas)|aucune\s.*idée).*/i.test(msg.content)) {
-      const tmpMode = channels[msg.channel.id].mode
-      const tmpFlag = flags[channels[msg.channel.id].flag]
+    const tmpMode = channels[msg.channel.id].mode
+    const tmpFlag = getFlag(msg, tmpMode)
+
+    if ((command === config.command && args[0] === 'stop')) { // Stop
       delete channels[msg.channel.id]
-
-      if (tmpMode === 'capital') {
-        await msg.reply(config.text.stop + ' **' + tmpFlag['capital'] + '**')
-      } else if (tmpMode === 'flag') {
-        await msg.reply(config.text.stop + ' **' + tmpFlag['country'] + '**')
+      await stop(msg, tmpMode, tmpFlag)
+    }
+    else if (((command === config.command && args[0] === 'next') || /(^Je passe|^Suivant$|^Next$)/i.test(msg.content))) { // Next
+      if (channels[msg.channel.id].loop) {
+        await next(msg, tmpMode, tmpFlag)
+        await sendAll(msg, tmpMode)
+      } else {
+        await msg.react('❌')
       }
-
-    // Check if answer is correct
-    } else if (checkAnswer(msg.content, flags[channels[msg.channel.id].flag], channels[msg.channel.id].mode)) {
-      // Check if loop mode
+    }
+    else if (checkAnswer(msg.content, tmpFlag, tmpMode)) { // Answer
       if (channels[msg.channel.id].loop) {
         await msg.react('👍')
-        if (channels[msg.channel.id].mode === 'capital') await sendCapital(msg, true)
-        else if (channels[msg.channel.id].mode === 'flag') await sendFlag(msg, true)
+        await sendAll(msg, tmpMode)
       } else {
-        delete channels[msg.channel.id] // Delete the current channel in object
-        await msg.reply('Bravo!')
+        delete channels[msg.channel.id]
+        await msg.reply('bravo ! :tada:')
       }
-    } else await msg.react('👎')
-
-  // Check for prefix + flag commands
-  } else if (command === config.command && msg.content.startsWith(config.prefix)) {
-    // Not loop mode
-    if (!args.length) {
-      await msg.channel.send(config.text.flagQuestion)
-      await sendFlag(msg, false)
-
-    // Loop mode
-    } else if (args[0] === 'loop') {
-      await msg.channel.send(config.text.flagQuestion + ' ' + config.text.flagLoop)
-      await sendFlag(msg, true)
-
-    } else if (args[0] === 'capital' && args[1] === 'loop') {
-      await msg.channel.send(config.text.capitalQuestion + ' ' + config.text.flagLoop)
-      await sendCapital(msg, true)
-
-    // Help
-    } else if (args[0] === 'help') {
-      const embed = new Discord.MessageEmbed()
-        .setTitle(config.text.helpTitle).setColor(0xff0000).setDescription(config.text.help)
-      await msg.channel.send(embed)
-
-    // Unknown argument
-    } else {
-      await msg.channel.send(config.text.unknown)
     }
+    else {
+      await msg.react('👎')
+    }
+  } else if (command === config.command && msg.content.startsWith(config.prefix)) {
+    await sendAll(msg, null, args)
   }
 })
 
