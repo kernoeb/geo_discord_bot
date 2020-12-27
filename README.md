@@ -1,6 +1,6 @@
-# Flag Discord Bot
+# Geo Discord Bot
 
-Bot Discord pour apprendre les drapeaux.
+Bot Discord pour apprendre les drapeaux, les capitales et les départements !
 
 ## Utilisation
 ```
