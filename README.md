@@ -2,6 +2,14 @@
 
 Bot Discord pour apprendre les drapeaux, les capitales et les départements !
 
+## Installation
+```
+git clone https://github.com/kernoeb/geo_discord_bot
+cd geo_discord_bot
+echo "TOKEN=XXXXX" > token.env
+docker-compose up -d --build
+```
+
 ## Utilisation
 ```
 - !geo help : aide
