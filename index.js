@@ -51,7 +51,7 @@ async function sendAll(msg, mode, args) {
 
   if ((mode && mode === 'capital') || (args && args[0] === 'capital')) {
     if (args) await msg.channel.send(config.text.capitalQuestion + (loop ? (' ' + config.text.loopMode) : ''))
-    await send(msg, loop, 'capital', flagKeysNoCapital, randFlag => randFlag + ' **' + flags[randFlag].country.split('|').join(', ') + '**')
+    await send(msg, loop, 'capital', flagKeysNoCapital, randFlag => randFlag + ' ' + utils.gras(flags[randFlag].country.split('|').join(', ') + '**'))
     return
   } else if ((mode && mode === 'flag') || (args && args[0] === 'flag')) {
     if (args) await msg.channel.send(config.text.flagQuestion + (loop ? (' ' + config.text.loopMode) : ''))
@@ -60,6 +60,10 @@ async function sendAll(msg, mode, args) {
   } else if ((mode && mode === 'departmentNumber') || (args && args[0] === 'dep')) {
     if (args) await msg.channel.send(config.text.departmentNumberQuestion + (loop ? (' ' + config.text.loopMode) : ''))
     await send(msg, loop, 'departmentNumber', departmentsKeys, randFlag => randFlag.split('').map(l => letters_digits[l]).join(''))
+    return
+  } else if ((mode && mode === 'prefecture') || (args && args[0] === 'prefecture')) {
+    if (args) await msg.channel.send(config.text.prefectureNumberQuestion + (loop ? (' ' + config.text.loopMode) : ''))
+    await send(msg, loop, 'prefecture', departmentsKeys, randFlag => randFlag.split('').map(l => letters_digits[l]).join('') + ' ' + utils.gras(departments[randFlag].name))
     return
   }
 
@@ -80,14 +84,16 @@ async function send(msg, loop, mode, keys, textFct) {
 async function stop(msg, mode, flag) {
   if (mode === 'capital') await msg.channel.send(utils.tag(msg.author.id) + ' ' + config.text.stop + ' ' + config.text.answerWas + ' ' + utils.gras(flag['capital']) + '.')
   else if (mode === 'flag') await msg.channel.send(utils.tag(msg.author.id) + ' ' + config.text.stop + ' ' + config.text.answerWas + ' ' + utils.gras(flag['country']) + '.')
-  else if (mode === 'departmentNumber') await msg.channel.send(utils.tag(msg.author.id) + ' ' + config.text.stop + ' ' + config.text.answerWas + ' ' + utils.gras(flag) + '.')
+  else if (mode === 'departmentNumber') await msg.channel.send(utils.tag(msg.author.id) + ' ' + config.text.stop + ' ' + config.text.answerWas + ' ' + utils.gras(flag['name']) + '.')
+  else if (mode === 'prefecture') await msg.channel.send(utils.tag(msg.author.id) + ' ' + config.text.stop + ' ' + config.text.answerWas + ' ' + utils.gras(flag['prefecture']) + '.')
 }
 
 // Reply with next message
 async function next(msg, mode, flag) {
   if (mode === 'capital') await msg.channel.send(config.text.answerWas + ' ' + utils.gras(flag['capital']) + '.')
   else if (mode === 'flag') await msg.channel.send(config.text.answerWas + ' ' + utils.gras(flag['country']) + '.')
-  else if (mode === 'departmentNumber') await msg.channel.send(config.text.answerWas + ' ' + utils.gras(flag) + '.')
+  else if (mode === 'departmentNumber') await msg.channel.send(config.text.answerWas + ' ' + utils.gras(flag['name']) + '.')
+  else if (mode === 'prefecture') await msg.channel.send(config.text.answerWas + ' ' + utils.gras(flag['prefecture']) + '.')
 }
 
 
@@ -100,7 +106,7 @@ async function sendChannel(msg, text) {
 // Get Flag
 function getFlag(msg, mode) {
   if (['flag', 'capital'].includes(mode)) return flags[channels[msg.channel.id].flag]
-  else if (['departmentNumber'].includes(mode)) return departments[channels[msg.channel.id].flag]
+  else if (['departmentNumber', 'prefecture'].includes(mode)) return departments[channels[msg.channel.id].flag]
 }
 
 // Set channel object
@@ -117,6 +123,8 @@ function setChannels(msg, randFlag, loop, mode) {
 function checkAnswer(msg, flag, mode) {
   if (mode === 'capital') flag = flag['capital']
   else if (mode === 'flag') flag = flag['country']
+  else if (mode === 'departmentNumber') flag = flag['name']
+  else if (mode === 'prefecture') flag = flag['prefecture']
 
   let b = false
   for (const i of flag.split('|')) {

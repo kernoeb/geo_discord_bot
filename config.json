@@ -7,6 +7,7 @@
     "flagQuestion": "**Quel est le drapeau ?**",
     "capitalQuestion": "**Quel est la capitale ?**",
     "departmentNumberQuestion": "**Quel est le département ?**",
+    "prefectureNumberQuestion": "**Quel est la préfecture ?**",
     "loopMode": "(mode boucle)",
     "unknown": "Commande inconnue... :thinking:  ",
     "helpTitle": "Aide...",
