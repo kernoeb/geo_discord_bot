@@ -119,6 +119,11 @@ function setChannels(msg, randFlag, loop, mode) {
   }
 }
 
+// Sanitize text
+function sanitize(text) {
+  return removeAccents(text).replace(/[-‘’']/g, ' ').replace(/[.*?!]/g, '').toUpperCase().trim()
+}
+
 // Check the answer
 function checkAnswer(msg, flag, mode) {
   if (mode === 'capital') flag = flag['capital']
@@ -128,8 +133,7 @@ function checkAnswer(msg, flag, mode) {
 
   let b = false
   for (const i of flag.split('|')) {
-    if (removeAccents(msg).replace(/-/g, ' ').replace(/\./g, '').toUpperCase().trim()
-      === removeAccents(i).replace(/-/g, ' ').replace(/\./g, '').toUpperCase().trim()) {
+    if (sanitize(msg) === sanitize(i)) {
       b = true
       break
     }
