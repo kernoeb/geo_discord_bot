@@ -3,7 +3,6 @@
  * @author kernoeb
  */
 const Discord = require('discord.js')
-const removeAccents = require('remove-accents')
 const utils = require('./utils')
 
 const client = new Discord.Client()
@@ -119,11 +118,6 @@ function setChannels(msg, randFlag, loop, mode) {
   }
 }
 
-// Sanitize text
-function sanitize(text) {
-  return removeAccents(text).replace(/[-‘’']/g, ' ').replace(/[.*?!]/g, '').toUpperCase().trim()
-}
-
 // Check the answer
 function checkAnswer(msg, flag, mode) {
   if (mode === 'capital') flag = flag['capital']
@@ -133,7 +127,7 @@ function checkAnswer(msg, flag, mode) {
 
   let b = false
   for (const i of flag.split('|')) {
-    if (sanitize(msg) === sanitize(i)) {
+    if (utils.sanitize(msg) === utils.sanitize(i)) {
       b = true
       break
     }
@@ -157,16 +151,14 @@ client.on('message', async (msg) => {
     if ((command === config.command && args[0] === 'stop')) { // Stop
       delete channels[msg.channel.id]
       await stop(msg, tmpMode, tmpFlag)
-    }
-    else if (((command === config.command && args[0] === 'next') || /(^Je passe|^Suivant$|^Next$)/i.test(msg.content))) { // Next
+    } else if (((command === config.command && args[0] === 'next') || /(^Je passe|^Suivant$|^Next$)/i.test(msg.content))) { // Next
       if (channels[msg.channel.id].loop) {
         await next(msg, tmpMode, tmpFlag)
         await sendAll(msg, tmpMode)
       } else {
         await msg.react('❌')
       }
-    }
-    else if (checkAnswer(msg.content, tmpFlag, tmpMode)) { // Answer
+    } else if (checkAnswer(msg.content, tmpFlag, tmpMode)) { // Answer
       if (channels[msg.channel.id].loop) {
         await msg.react('👍')
         await sendAll(msg, tmpMode)
@@ -174,8 +166,7 @@ client.on('message', async (msg) => {
         delete channels[msg.channel.id]
         await msg.reply('bravo ! :tada:')
       }
-    }
-    else {
+    } else {
       await msg.react('👎')
     }
   } else if (command === config.command && msg.content.startsWith(config.prefix)) {
