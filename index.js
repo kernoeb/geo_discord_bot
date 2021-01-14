@@ -50,7 +50,7 @@ async function sendAll(msg, mode, args) {
 
   if ((mode && mode === 'capital') || (args && args[0] === 'capital')) {
     if (args) await msg.channel.send(config.text.capitalQuestion + (loop ? (' ' + config.text.loopMode) : ''))
-    await send(msg, loop, 'capital', flagKeysNoCapital, randFlag => randFlag + ' ' + utils.gras(flags[randFlag].country.split('|').join(', ') + '**'))
+    await send(msg, loop, 'capital', flagKeysNoCapital, randFlag => randFlag + ' ' + utils.gras(flags[randFlag].country.split('|').join(', ')))
     return
   } else if ((mode && mode === 'flag') || (args && args[0] === 'flag')) {
     if (args) await msg.channel.send(config.text.flagQuestion + (loop ? (' ' + config.text.loopMode) : ''))
