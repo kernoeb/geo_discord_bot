@@ -1,5 +1,7 @@
 FROM node:14-alpine3.15
 
+RUN apk add python3 zlib-dev alpine-sdk
+
 WORKDIR /app
 ADD . /app/
 
