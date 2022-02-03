@@ -1,14 +1,11 @@
-FROM node:14.15.3
+FROM node:14-alpine3.15
 
-# Create app directory
 WORKDIR /app
 ADD . /app/
 
-RUN yarn
-
 ENV NODE_ENV production
+RUN yarn install --production
 
 EXPOSE 3000
 
-# start command
 CMD [ "yarn", "start" ]

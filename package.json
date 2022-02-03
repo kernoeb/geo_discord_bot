@@ -11,13 +11,13 @@
   "author": "kernoeb",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^12.5.1",
+    "discord.js": "^12.5.3",
     "erlpack": "discord/erlpack",
-    "nodemon": "^2.0.6",
     "remove-accents": "^0.4.2",
     "zlib-sync": "^0.1.7"
   },
   "devDependencies": {
-    "eslint": "^7.16.0"
+    "eslint": "^7.16.0",
+    "nodemon": "^2.0.15"
   }
 }
