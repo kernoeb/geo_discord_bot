@@ -6,7 +6,8 @@ WORKDIR /app
 
 ADD index.js .
 ADD utils.js .
-ADD data .
+ADD config.json .
+ADD data data
 
 ADD package.json .
 ADD yarn.lock .
