@@ -4,6 +4,7 @@
  */
 const Discord = require('discord.js')
 const utils = require('./utils')
+const chance = require('chance').Chance()
 
 const client = new Discord.Client()
 
@@ -74,7 +75,7 @@ async function sendAll(msg, mode, args) {
 
 // Send message
 async function send(msg, loop, mode, keys, textFct) {
-  const randFlag = keys[Math.floor(Math.random() * keys.length)]
+  const randFlag = chance.pickone(keys)
   setChannels(msg, randFlag, loop, mode)
   await sendChannel(msg, textFct(randFlag))
 }

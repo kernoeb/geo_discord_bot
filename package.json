@@ -11,8 +11,10 @@
   "author": "kernoeb",
   "license": "ISC",
   "dependencies": {
+    "chance": "^1.1.8",
     "discord.js": "^12.5.3",
     "erlpack": "discord/erlpack",
+    "node-gyp": "^8.4.1",
     "remove-accents": "^0.4.2",
     "zlib-sync": "^0.1.7"
   },
