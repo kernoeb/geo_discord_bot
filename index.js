@@ -144,7 +144,11 @@ client.on('message', async (msg) => {
   const command = args.shift().toLowerCase() // Command
 
   if (channels[msg.channel.id]) {
-    if (channels[msg.channel.id].pending || (msg.content.startsWith('!') && (!(command === config.command && /(stop|next)/.test(args[0]))))) return // Pending
+    if (channels[msg.channel.id].pending) {
+      console.log('Pending : ' + msg.channel.id)
+      return
+    }
+    if (msg.content.startsWith('!') && (!(command === config.command && /(stop|next)/.test(args[0])))) return
 
     const tmpMode = channels[msg.channel.id].mode
     const tmpFlag = getFlag(msg, tmpMode)
@@ -154,15 +158,19 @@ client.on('message', async (msg) => {
       await stop(msg, tmpMode, tmpFlag)
     } else if (((command === config.command && args[0] === 'next') || /(^Je passe|^Suivant$|^Next$)/i.test(msg.content))) { // Next
       if (channels[msg.channel.id].loop) {
+        channels[msg.channel.id].pending = true
         await next(msg, tmpMode, tmpFlag)
         await sendAll(msg, tmpMode)
+        channels[msg.channel.id].pending = false
       } else {
         await msg.react('❌')
       }
     } else if (checkAnswer(msg.content, tmpFlag, tmpMode)) { // Answer
       if (channels[msg.channel.id].loop) {
+        channels[msg.channel.id].pending = true
         await msg.react('👍')
         await sendAll(msg, tmpMode)
+        channels[msg.channel.id].pending = false
       } else {
         delete channels[msg.channel.id]
         await msg.reply('bravo ! :tada:')
