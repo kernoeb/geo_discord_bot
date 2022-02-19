@@ -83,7 +83,7 @@ async function send(msg, loop, mode, keys, textFct) {
 // Reply with stop message
 async function stop(msg, mode, flag) {
   if (mode === 'capital') await msg.channel.send(utils.tag(msg.author.id) + ' ' + config.text.stop + ' ' + config.text.answerWas + ' ' + utils.gras(flag['capital']) + '.')
-  else if (mode === 'flag') await msg.channel.send(utils.tag(msg.author.id) + ' ' + config.text.stop + ' ' + config.text.answerWas + ' ' + utils.gras(flag['country']) + '.')
+  else if (mode === 'flag') await msg.channel.send(utils.tag(msg.author.id) + ' ' + config.text.stop + ' ' + config.text.answerWas + ' ' + utils.gras(flag['country']).split('|').join(', ') + '.')
   else if (mode === 'departmentNumber') await msg.channel.send(utils.tag(msg.author.id) + ' ' + config.text.stop + ' ' + config.text.answerWas + ' ' + utils.gras(flag['name']) + '.')
   else if (mode === 'prefecture') await msg.channel.send(utils.tag(msg.author.id) + ' ' + config.text.stop + ' ' + config.text.answerWas + ' ' + utils.gras(flag['prefecture']) + '.')
 }
@@ -91,7 +91,7 @@ async function stop(msg, mode, flag) {
 // Reply with next message
 async function next(msg, mode, flag) {
   if (mode === 'capital') await msg.channel.send(config.text.answerWas + ' ' + utils.gras(flag['capital']) + '.')
-  else if (mode === 'flag') await msg.channel.send(config.text.answerWas + ' ' + utils.gras(flag['country']) + '.')
+  else if (mode === 'flag') await msg.channel.send(config.text.answerWas + ' ' + utils.gras(flag['country']).split('|').join(', ') + '.')
   else if (mode === 'departmentNumber') await msg.channel.send(config.text.answerWas + ' ' + utils.gras(flag['name']) + '.')
   else if (mode === 'prefecture') await msg.channel.send(config.text.answerWas + ' ' + utils.gras(flag['prefecture']) + '.')
 }
