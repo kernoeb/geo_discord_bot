@@ -1,21 +1,24 @@
-FROM node:16.14.0-alpine3.15
+FROM debian:bookworm-slim as base
+WORKDIR /usr/src/app
 
-RUN apk add --no-cache python3 zlib-dev alpine-sdk curl
+RUN apt update -y && apt install unzip curl -y
+RUN curl -fsSL https://bun.sh/install | bash
 
-RUN curl -f https://get.pnpm.io/v6.16.js | node - add --global pnpm
+FROM base as build
 
-ENV NODE_ENV production
+COPY . .
+
+SHELL ["/bin/bash", "-c"]
+
+ENV PATH=~/.bun/bin:$PATH
+
+RUN bun install --production
+
+RUN bun build ./index.ts --compile --outfile /tmp/app
+
+FROM gcr.io/distroless/base-debian12:nonroot
+
 WORKDIR /app
+COPY --from=build /tmp/app /app
 
-COPY package.json pnpm-lock.yaml ./
-
-RUN pnpm install --frozen-lockfile --prod
-
-ADD index.js .
-ADD utils.js .
-ADD config.json .
-ADD data data
-
-EXPOSE 3000
-
-CMD [ "node", "index.js" ]
+ENTRYPOINT [ "./app" ]

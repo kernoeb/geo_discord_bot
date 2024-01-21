@@ -1,406 +1,406 @@
 {
-  "10": {
-    "name": "Aube",
-    "prefecture": "Troyes"
-  },
-  "11": {
-    "name": "Aude",
-    "prefecture": "Carcassonne"
-  },
-  "12": {
-    "name": "Aveyron",
-    "prefecture": "Rodez"
-  },
-  "13": {
-    "name": "Bouches-du-Rhône",
-    "prefecture": "Marseille"
-  },
-  "14": {
-    "name": "Calvados",
-    "prefecture": "Caen"
-  },
-  "15": {
-    "name": "Cantal",
-    "prefecture": "Aurillac"
-  },
-  "16": {
-    "name": "Charente",
-    "prefecture": "Angoulême"
-  },
-  "17": {
-    "name": "Charente-Maritime",
-    "prefecture": "La Rochelle"
-  },
-  "18": {
-    "name": "Cher",
-    "prefecture": "Bourges"
-  },
-  "19": {
-    "name": "Corrèze",
-    "prefecture": "Tulle"
-  },
-  "21": {
-    "name": "Côte-d'Or",
-    "prefecture": "Dijon"
-  },
-  "22": {
-    "name": "Côtes d'Armor",
-    "prefecture": "Saint-Brieuc"
-  },
-  "23": {
-    "name": "Creuse",
-    "prefecture": "Guéret"
-  },
-  "24": {
-    "name": "Dordogne",
-    "prefecture": "Périgueux"
-  },
-  "25": {
-    "name": "Doubs",
-    "prefecture": "Besançon"
-  },
-  "26": {
-    "name": "Drôme",
-    "prefecture": "Valence"
-  },
-  "27": {
-    "name": "Eure",
-    "prefecture": "Évreux"
-  },
-  "28": {
-    "name": "Eure-et-Loir",
-    "prefecture": "Chartres"
-  },
-  "29": {
-    "name": "Finistère",
-    "prefecture": "Quimper"
-  },
-  "30": {
-    "name": "Gard",
-    "prefecture": "Nîmes"
-  },
-  "31": {
-    "name": "Haute-Garonne",
-    "prefecture": "Toulouse"
-  },
-  "32": {
-    "name": "Gers",
-    "prefecture": "Auch"
-  },
-  "33": {
-    "name": "Gironde",
-    "prefecture": "Bordeaux"
-  },
-  "34": {
-    "name": "Hérault",
-    "prefecture": "Montpellier"
-  },
-  "35": {
-    "name": "Ille-et-Vilaine",
-    "prefecture": "Rennes"
-  },
-  "36": {
-    "name": "Indre",
-    "prefecture": "Châteauroux"
-  },
-  "37": {
-    "name": "Indre-et-Loire",
-    "prefecture": "Tours"
-  },
-  "38": {
-    "name": "Isère",
-    "prefecture": "Grenoble"
-  },
-  "39": {
-    "name": "Jura",
-    "prefecture": "Lons-le-Saunier"
-  },
-  "40": {
-    "name": "Landes",
-    "prefecture": "Mont-de-Marsan"
-  },
-  "41": {
-    "name": "Loir-et-Cher",
-    "prefecture": "Blois"
-  },
-  "42": {
-    "name": "Loire",
-    "prefecture": "Saint-Étienne"
-  },
-  "43": {
-    "name": "Haute-Loire",
-    "prefecture": "Le Puy-en-Velay"
-  },
-  "44": {
-    "name": "Loire-Atlantique",
-    "prefecture": "Nantes"
-  },
-  "45": {
-    "name": "Loiret",
-    "prefecture": "Orléans"
-  },
-  "46": {
-    "name": "Lot",
-    "prefecture": "Cahors"
-  },
-  "47": {
-    "name": "Lot-et-Garonne",
-    "prefecture": "Agen"
-  },
-  "48": {
-    "name": "Lozère",
-    "prefecture": "Mende"
-  },
-  "49": {
-    "name": "Maine-et-Loire",
-    "prefecture": "Angers"
-  },
-  "50": {
-    "name": "Manche",
-    "prefecture": "Saint-Lô"
-  },
-  "51": {
-    "name": "Marne",
-    "prefecture": "Châlons-en-Champagne"
-  },
-  "52": {
-    "name": "Haute-Marne",
-    "prefecture": "Chaumont"
-  },
-  "53": {
-    "name": "Mayenne",
-    "prefecture": "Laval"
-  },
-  "54": {
-    "name": "Meurthe-et-Moselle",
-    "prefecture": "Nancy"
-  },
-  "55": {
-    "name": "Meuse",
-    "prefecture": "Bar-le-Duc"
-  },
-  "56": {
-    "name": "Morbihan",
-    "prefecture": "Vannes"
-  },
-  "57": {
-    "name": "Moselle",
-    "prefecture": "Metz"
-  },
-  "58": {
-    "name": "Nièvre",
-    "prefecture": "Nevers"
-  },
-  "59": {
-    "name": "Nord",
-    "prefecture": "Lille"
-  },
-  "60": {
-    "name": "Oise",
-    "prefecture": "Beauvais"
-  },
-  "61": {
-    "name": "Orne",
-    "prefecture": "Alençon"
-  },
-  "62": {
-    "name": "Pas-de-Calais",
-    "prefecture": "Arras"
-  },
-  "63": {
-    "name": "Puy-de-Dôme",
-    "prefecture": "Clermont-Ferrand"
-  },
-  "64": {
-    "name": "Pyrénées-Atlantiques",
-    "prefecture": "Pau"
-  },
-  "65": {
-    "name": "Hautes-Pyrénées",
-    "prefecture": "Tarbes"
-  },
-  "66": {
-    "name": "Pyrénées-Orientales",
-    "prefecture": "Perpignan"
-  },
-  "67": {
-    "name": "Bas-Rhin",
-    "prefecture": "Strasbourg"
-  },
-  "68": {
-    "name": "Haut-Rhin",
-    "prefecture": "Colmar"
-  },
-  "69": {
-    "name": "Rhône",
-    "prefecture": "Lyon"
-  },
-  "70": {
-    "name": "Haute-Saône",
-    "prefecture": "Vesoul"
-  },
-  "71": {
-    "name": "Saône-et-Loire",
-    "prefecture": "Mâcon"
-  },
-  "72": {
-    "name": "Sarthe",
-    "prefecture": "Le Mans"
-  },
-  "73": {
-    "name": "Savoie",
-    "prefecture": "Chambéry"
-  },
-  "74": {
-    "name": "Haute-Savoie",
-    "prefecture": "Annecy"
-  },
-  "75": {
-    "name": "Paris",
-    "prefecture": "Paris"
-  },
-  "76": {
-    "name": "Seine-Maritime",
-    "prefecture": "Rouen"
-  },
-  "77": {
-    "name": "Seine-et-Marne",
-    "prefecture": "Melun"
-  },
-  "78": {
-    "name": "Yvelines",
-    "prefecture": "Versailles"
-  },
-  "79": {
-    "name": "Deux-Sèvres",
-    "prefecture": "Niort"
-  },
-  "80": {
-    "name": "Somme",
-    "prefecture": "Amiens"
-  },
-  "81": {
-    "name": "Tarn",
-    "prefecture": "Albi"
-  },
-  "82": {
-    "name": "Tarn-et-Garonne",
-    "prefecture": "Montauban"
-  },
-  "83": {
-    "name": "Var",
-    "prefecture": "Toulon"
-  },
-  "84": {
-    "name": "Vaucluse",
-    "prefecture": "Avignon"
-  },
-  "85": {
-    "name": "Vendée",
-    "prefecture": "La Roche-sur-Yon"
-  },
-  "86": {
-    "name": "Vienne",
-    "prefecture": "Poitiers"
-  },
-  "87": {
-    "name": "Haute-Vienne",
-    "prefecture": "Limoges"
-  },
-  "88": {
-    "name": "Vosges",
-    "prefecture": "Épinal"
-  },
-  "89": {
-    "name": "Yonne",
-    "prefecture": "Auxerre"
-  },
-  "90": {
-    "name": "Territoire de Belfort",
-    "prefecture": "Belfort"
-  },
-  "91": {
-    "name": "Essonne",
-    "prefecture": "Évry-Courcouronnes"
-  },
-  "92": {
-    "name": "Hauts-de-Seine",
-    "prefecture": "Nanterre"
-  },
-  "93": {
-    "name": "Seine-St-Denis",
-    "prefecture": "Bobigny"
-  },
-  "94": {
-    "name": "Val-de-Marne",
-    "prefecture": "Créteil"
-  },
-  "95": {
-    "name": "Val-D'Oise",
-    "prefecture": "Cergy"
-  },
-  "971": {
-    "name": "Guadeloupe",
-    "prefecture": "Basse-Terre"
-  },
-  "972": {
-    "name": "Martinique",
-    "prefecture": "Fort-de-France"
-  },
-  "973": {
-    "name": "Guyane",
-    "prefecture": "Cayenne"
-  },
-  "974": {
-    "name": "La Réunion",
-    "prefecture": "Saint-Denis"
-  },
-  "976": {
-    "name": "Mayotte",
-    "prefecture": "Mamoudzou"
-  },
-  "01": {
-    "name": "Ain",
-    "prefecture": "Bourg-en-Bresse"
-  },
-  "02": {
-    "name": "Aisne",
-    "prefecture": "Laon"
-  },
-  "03": {
-    "name": "Allier",
-    "prefecture": "Moulins"
-  },
-  "04": {
-    "name": "Alpes-de-Haute-Provence",
-    "prefecture": "Digne-les-Bains"
-  },
-  "05": {
-    "name": "Hautes-Alpes",
-    "prefecture": "Gap"
-  },
-  "06": {
-    "name": "Alpes-Maritimes",
-    "prefecture": "Nice"
-  },
-  "07": {
-    "name": "Ardèche",
-    "prefecture": "Privas"
-  },
-  "08": {
-    "name": "Ardennes",
-    "prefecture": "Charleville-Mézières"
-  },
-  "09": {
-    "name": "Ariège",
-    "prefecture": "Foix"
-  },
-  "2A": {
-    "name": "Corse-du-Sud",
-    "prefecture": "Ajaccio"
-  },
-  "2B": {
-    "name": "Haute-Corse",
-    "prefecture": "Bastia"
-  }
+	"10": {
+		"name": "Aube",
+		"prefecture": "Troyes"
+	},
+	"11": {
+		"name": "Aude",
+		"prefecture": "Carcassonne"
+	},
+	"12": {
+		"name": "Aveyron",
+		"prefecture": "Rodez"
+	},
+	"13": {
+		"name": "Bouches-du-Rhône",
+		"prefecture": "Marseille"
+	},
+	"14": {
+		"name": "Calvados",
+		"prefecture": "Caen"
+	},
+	"15": {
+		"name": "Cantal",
+		"prefecture": "Aurillac"
+	},
+	"16": {
+		"name": "Charente",
+		"prefecture": "Angoulême"
+	},
+	"17": {
+		"name": "Charente-Maritime",
+		"prefecture": "La Rochelle"
+	},
+	"18": {
+		"name": "Cher",
+		"prefecture": "Bourges"
+	},
+	"19": {
+		"name": "Corrèze",
+		"prefecture": "Tulle"
+	},
+	"21": {
+		"name": "Côte-d'Or",
+		"prefecture": "Dijon"
+	},
+	"22": {
+		"name": "Côtes d'Armor",
+		"prefecture": "Saint-Brieuc"
+	},
+	"23": {
+		"name": "Creuse",
+		"prefecture": "Guéret"
+	},
+	"24": {
+		"name": "Dordogne",
+		"prefecture": "Périgueux"
+	},
+	"25": {
+		"name": "Doubs",
+		"prefecture": "Besançon"
+	},
+	"26": {
+		"name": "Drôme",
+		"prefecture": "Valence"
+	},
+	"27": {
+		"name": "Eure",
+		"prefecture": "Évreux"
+	},
+	"28": {
+		"name": "Eure-et-Loir",
+		"prefecture": "Chartres"
+	},
+	"29": {
+		"name": "Finistère",
+		"prefecture": "Quimper"
+	},
+	"30": {
+		"name": "Gard",
+		"prefecture": "Nîmes"
+	},
+	"31": {
+		"name": "Haute-Garonne",
+		"prefecture": "Toulouse"
+	},
+	"32": {
+		"name": "Gers",
+		"prefecture": "Auch"
+	},
+	"33": {
+		"name": "Gironde",
+		"prefecture": "Bordeaux"
+	},
+	"34": {
+		"name": "Hérault",
+		"prefecture": "Montpellier"
+	},
+	"35": {
+		"name": "Ille-et-Vilaine",
+		"prefecture": "Rennes"
+	},
+	"36": {
+		"name": "Indre",
+		"prefecture": "Châteauroux"
+	},
+	"37": {
+		"name": "Indre-et-Loire",
+		"prefecture": "Tours"
+	},
+	"38": {
+		"name": "Isère",
+		"prefecture": "Grenoble"
+	},
+	"39": {
+		"name": "Jura",
+		"prefecture": "Lons-le-Saunier"
+	},
+	"40": {
+		"name": "Landes",
+		"prefecture": "Mont-de-Marsan"
+	},
+	"41": {
+		"name": "Loir-et-Cher",
+		"prefecture": "Blois"
+	},
+	"42": {
+		"name": "Loire",
+		"prefecture": "Saint-Étienne"
+	},
+	"43": {
+		"name": "Haute-Loire",
+		"prefecture": "Le Puy-en-Velay"
+	},
+	"44": {
+		"name": "Loire-Atlantique",
+		"prefecture": "Nantes"
+	},
+	"45": {
+		"name": "Loiret",
+		"prefecture": "Orléans"
+	},
+	"46": {
+		"name": "Lot",
+		"prefecture": "Cahors"
+	},
+	"47": {
+		"name": "Lot-et-Garonne",
+		"prefecture": "Agen"
+	},
+	"48": {
+		"name": "Lozère",
+		"prefecture": "Mende"
+	},
+	"49": {
+		"name": "Maine-et-Loire",
+		"prefecture": "Angers"
+	},
+	"50": {
+		"name": "Manche",
+		"prefecture": "Saint-Lô"
+	},
+	"51": {
+		"name": "Marne",
+		"prefecture": "Châlons-en-Champagne"
+	},
+	"52": {
+		"name": "Haute-Marne",
+		"prefecture": "Chaumont"
+	},
+	"53": {
+		"name": "Mayenne",
+		"prefecture": "Laval"
+	},
+	"54": {
+		"name": "Meurthe-et-Moselle",
+		"prefecture": "Nancy"
+	},
+	"55": {
+		"name": "Meuse",
+		"prefecture": "Bar-le-Duc"
+	},
+	"56": {
+		"name": "Morbihan",
+		"prefecture": "Vannes"
+	},
+	"57": {
+		"name": "Moselle",
+		"prefecture": "Metz"
+	},
+	"58": {
+		"name": "Nièvre",
+		"prefecture": "Nevers"
+	},
+	"59": {
+		"name": "Nord",
+		"prefecture": "Lille"
+	},
+	"60": {
+		"name": "Oise",
+		"prefecture": "Beauvais"
+	},
+	"61": {
+		"name": "Orne",
+		"prefecture": "Alençon"
+	},
+	"62": {
+		"name": "Pas-de-Calais",
+		"prefecture": "Arras"
+	},
+	"63": {
+		"name": "Puy-de-Dôme",
+		"prefecture": "Clermont-Ferrand"
+	},
+	"64": {
+		"name": "Pyrénées-Atlantiques",
+		"prefecture": "Pau"
+	},
+	"65": {
+		"name": "Hautes-Pyrénées",
+		"prefecture": "Tarbes"
+	},
+	"66": {
+		"name": "Pyrénées-Orientales",
+		"prefecture": "Perpignan"
+	},
+	"67": {
+		"name": "Bas-Rhin",
+		"prefecture": "Strasbourg"
+	},
+	"68": {
+		"name": "Haut-Rhin",
+		"prefecture": "Colmar"
+	},
+	"69": {
+		"name": "Rhône",
+		"prefecture": "Lyon"
+	},
+	"70": {
+		"name": "Haute-Saône",
+		"prefecture": "Vesoul"
+	},
+	"71": {
+		"name": "Saône-et-Loire",
+		"prefecture": "Mâcon"
+	},
+	"72": {
+		"name": "Sarthe",
+		"prefecture": "Le Mans"
+	},
+	"73": {
+		"name": "Savoie",
+		"prefecture": "Chambéry"
+	},
+	"74": {
+		"name": "Haute-Savoie",
+		"prefecture": "Annecy"
+	},
+	"75": {
+		"name": "Paris",
+		"prefecture": "Paris"
+	},
+	"76": {
+		"name": "Seine-Maritime",
+		"prefecture": "Rouen"
+	},
+	"77": {
+		"name": "Seine-et-Marne",
+		"prefecture": "Melun"
+	},
+	"78": {
+		"name": "Yvelines",
+		"prefecture": "Versailles"
+	},
+	"79": {
+		"name": "Deux-Sèvres",
+		"prefecture": "Niort"
+	},
+	"80": {
+		"name": "Somme",
+		"prefecture": "Amiens"
+	},
+	"81": {
+		"name": "Tarn",
+		"prefecture": "Albi"
+	},
+	"82": {
+		"name": "Tarn-et-Garonne",
+		"prefecture": "Montauban"
+	},
+	"83": {
+		"name": "Var",
+		"prefecture": "Toulon"
+	},
+	"84": {
+		"name": "Vaucluse",
+		"prefecture": "Avignon"
+	},
+	"85": {
+		"name": "Vendée",
+		"prefecture": "La Roche-sur-Yon"
+	},
+	"86": {
+		"name": "Vienne",
+		"prefecture": "Poitiers"
+	},
+	"87": {
+		"name": "Haute-Vienne",
+		"prefecture": "Limoges"
+	},
+	"88": {
+		"name": "Vosges",
+		"prefecture": "Épinal"
+	},
+	"89": {
+		"name": "Yonne",
+		"prefecture": "Auxerre"
+	},
+	"90": {
+		"name": "Territoire de Belfort",
+		"prefecture": "Belfort"
+	},
+	"91": {
+		"name": "Essonne",
+		"prefecture": "Évry-Courcouronnes"
+	},
+	"92": {
+		"name": "Hauts-de-Seine",
+		"prefecture": "Nanterre"
+	},
+	"93": {
+		"name": "Seine-St-Denis",
+		"prefecture": "Bobigny"
+	},
+	"94": {
+		"name": "Val-de-Marne",
+		"prefecture": "Créteil"
+	},
+	"95": {
+		"name": "Val-D'Oise",
+		"prefecture": "Cergy"
+	},
+	"971": {
+		"name": "Guadeloupe",
+		"prefecture": "Basse-Terre"
+	},
+	"972": {
+		"name": "Martinique",
+		"prefecture": "Fort-de-France"
+	},
+	"973": {
+		"name": "Guyane",
+		"prefecture": "Cayenne"
+	},
+	"974": {
+		"name": "La Réunion",
+		"prefecture": "Saint-Denis"
+	},
+	"976": {
+		"name": "Mayotte",
+		"prefecture": "Mamoudzou"
+	},
+	"01": {
+		"name": "Ain",
+		"prefecture": "Bourg-en-Bresse"
+	},
+	"02": {
+		"name": "Aisne",
+		"prefecture": "Laon"
+	},
+	"03": {
+		"name": "Allier",
+		"prefecture": "Moulins"
+	},
+	"04": {
+		"name": "Alpes-de-Haute-Provence",
+		"prefecture": "Digne-les-Bains"
+	},
+	"05": {
+		"name": "Hautes-Alpes",
+		"prefecture": "Gap"
+	},
+	"06": {
+		"name": "Alpes-Maritimes",
+		"prefecture": "Nice"
+	},
+	"07": {
+		"name": "Ardèche",
+		"prefecture": "Privas"
+	},
+	"08": {
+		"name": "Ardennes",
+		"prefecture": "Charleville-Mézières"
+	},
+	"09": {
+		"name": "Ariège",
+		"prefecture": "Foix"
+	},
+	"2A": {
+		"name": "Corse-du-Sud",
+		"prefecture": "Ajaccio"
+	},
+	"2B": {
+		"name": "Haute-Corse",
+		"prefecture": "Bastia"
+	}
 }

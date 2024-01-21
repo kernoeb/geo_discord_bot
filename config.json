@@ -1,16 +1,16 @@
 {
-  "prefix": "!",
-  "command": "geo",
-  "text": {
-    "stop": "a stoppé la partie.",
-    "answerWas": "La réponse était :",
-    "flagQuestion": "**Quel est le drapeau ?**",
-    "capitalQuestion": "**Quelle est la capitale ?**",
-    "departmentNumberQuestion": "**Quel est le département ?**",
-    "prefectureNumberQuestion": "**Quelle est la préfecture ?**",
-    "loopMode": "(mode boucle)",
-    "unknown": "Commande inconnue... :thinking:  ",
-    "helpTitle": "Aide...",
-    "help": "- **!geo help** : aide\n\n- **!geo flag [loop]** : devine le(s) drapeau(x)\n- **!geo capital [loop]** : devine la ou les capitale(s)\n- **!geo dep [loop]** : devine le ou les département(s) :flag_fr:\n**- !geo prefecture [loop]** : devine la ou les préfecture(s) :flag_fr:\n\n- **!geo next** : passe au suivant (ou \"Je passe\", \"Suivant\", ou \"Next\")\n- **!geo stop** : termine la partie en cours"
-  }
+	"prefix": "!",
+	"command": "geo",
+	"text": {
+		"stop": "a stoppé la partie.",
+		"answerWas": "La réponse était :",
+		"flagQuestion": "**Quel est le drapeau ?**",
+		"capitalQuestion": "**Quelle est la capitale ?**",
+		"departmentNumberQuestion": "**Quel est le département ?**",
+		"prefectureNumberQuestion": "**Quelle est la préfecture ?**",
+		"loopMode": "(mode boucle)",
+		"unknown": "Commande inconnue... :thinking:  ",
+		"helpTitle": "Aide...",
+		"help": "- **!geo help** : aide\n\n- **!geo flag [loop]** : devine le(s) drapeau(x)\n- **!geo capital [loop]** : devine la ou les capitale(s)\n- **!geo dep [loop]** : devine le ou les département(s) :flag_fr:\n**- !geo prefecture [loop]** : devine la ou les préfecture(s) :flag_fr:\n\n- **!geo next** : passe au suivant (ou \"Je passe\", \"Suivant\", ou \"Next\")\n- **!geo stop** : termine la partie en cours"
+	}
 }

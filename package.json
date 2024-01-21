@@ -2,24 +2,23 @@
   "name": "discord_flag",
   "version": "1.0.0",
   "description": "Learn flags",
-  "main": "index.js",
+  "main": "index.ts",
+  "type": "module",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
+    "start": "bun run index.ts",
+    "dev": "bun run --watch index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "kernoeb",
   "license": "ISC",
   "dependencies": {
-    "chance": "^1.1.8",
-    "discord.js": "^12.5.3",
-    "erlpack": "discord/erlpack",
-    "node-gyp": "^8.4.1",
-    "remove-accents": "^0.4.2",
-    "zlib-sync": "^0.1.7"
+    "chance": "1.1.11",
+    "discord.js": "14.14.1",
+    "remove-accents": "0.5.0"
   },
   "devDependencies": {
-    "eslint": "^7.16.0",
-    "nodemon": "^2.0.15"
+    "@biomejs/biome": "1.5.2",
+    "@types/bun": "latest",
+    "@types/chance": "1.1.6"
   }
 }
